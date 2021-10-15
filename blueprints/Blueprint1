@@ -1,1 +1,51 @@
 
+spec_version: 1 
+kind: blueprint                    
+
+environmentType: sandbox 
+
+metadata:                          
+
+  description: > 
+    testing !!!
+clouds:                            
+
+  - AWS: eu-west-1 
+
+artifacts:                         
+
+  - java-spring-website: latest/torque-java-spring-sample-1.0.0-BUILD-SNAPSHOT.war 
+
+inputs: 
+  - DB_USER: root
+  - DB_PASS:
+      display_style: masked
+      description: >
+        please set the root database password default_value: Torque!123
+  - DB_NAME: demo_db
+
+applications: 
+
+  - java-spring-website:
+      instances: 1
+      input_values: 
+      - DB_USER: $DB_USER 
+      - DB_PASS: $DB_PASS 
+      - DB_NAME: $DB_NAME 
+      - DB_HOSTNAME: $torque.services.rds-mysql-aurora-cluster.outputs.hostname 
+      depends_on:  
+        - rds-mysql-aurora-cluster 
+services: 
+
+  - rds-mysql-aurora-cluster: 
+      input_values: 
+      - DB_NAME: $DB_NAME 
+      - DB_USER: $DB_USER 
+      - DB_PASS: $DB_PASS 
+      - CLUSTER_MIN_CAPACITY: 2 
+      - CLUSTER_MAX_CAPACITY: 4 
+      - SANDBOX_ID: $torque.environment.id 
+      - VPC_ID: $torque.environment.virtual_network_id 
+debugging: 
+
+  bastion_availability: enabled-on
