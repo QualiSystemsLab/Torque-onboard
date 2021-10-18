@@ -48,7 +48,7 @@ infrastructure:
             unhealthy-threshold: 10
     internal:
       - port_info:
-          port: 3000
+          port: 3001
 
 
 
