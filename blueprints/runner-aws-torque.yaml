@@ -18,5 +18,19 @@ applications:
           - sandbox_id: $torque.environment.id
           - randomint: $version
 
+ingress:
+  listeners:
+    - http: 80
+      redirect_to_listener: 443
+    - https: 443
+      certificate: $CERT_ARN
+      rules:
+      - path: /api/*
+        application: staging-vm
+        port: 3001
+      - default: true
+        application: staging-vm
+        port: 3000
+
 debugging:
   availability: on
