@@ -46,6 +46,9 @@ infrastructure:
             status-codes: 200-299
             timeout: 30
             unhealthy-threshold: 10
+    internal:
+      - port_info:
+          port: 3000
 
 
 
