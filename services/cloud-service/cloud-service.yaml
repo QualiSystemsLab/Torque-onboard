@@ -19,7 +19,7 @@ variables:
     - db_name: $DB_NAME
     - username: $DB_USER
     - password: $DB_PASS
-    - sandbox_id:  $SB_ID
+    - sandbox_id: $SB_ID
     - vpc_id: $VPC_ID
 outputs:                                   
   - hostname    
