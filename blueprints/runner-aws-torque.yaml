@@ -24,6 +24,7 @@ services:
         - DB_NAME: xxx
         - DB_USER: yyy
         - DB_PASS: tyut876lu!
+        - SB_ID:  $torque.environment.id
         - VPC_ID: $torque.environment.virtual_network_id
 
 ingress:
