@@ -35,21 +35,10 @@ infrastructure:
         vm_size: Standard_D2a_v4
       aws: 
         instance_type: t3.nano
-  connectivity:
-    external:
-      - port_info:
-          port: 80
-          ingress-healthcheck:                 
-            healthy-threshold: 2
-            interval: 60
-            path: /
-            status-codes: 200-299
-            timeout: 30
-            unhealthy-threshold: 10
+  connectivity:    
     internal:
       - port_info:
-          port: 3001
-
+          port: 80
 
 
 configuration:  
