@@ -7,6 +7,7 @@ inputs:
   - DB_NAME
   - DB_USER
   - DB_PASS
+  - SB_ID
   - VPC_ID
   - role_arn: PowerUserAccess
 module:                                   
@@ -18,7 +19,7 @@ variables:
     - db_name: $DB_NAME
     - username: $DB_USER
     - password: $DB_PASS
-    - sandbox_id: $torque.environment.id
+    - sandbox_id:  $SB_ID
     - vpc_id: $VPC_ID
 outputs:                                   
   - hostname    
