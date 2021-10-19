@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ip=$1
-port=5000
+port=1001
 hostname=${ip}:${port}
 
 for (( ; ; ))
