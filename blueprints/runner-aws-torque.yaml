@@ -18,7 +18,7 @@ applications:
           - sandbox_id: $torque.environment.id
           - randomint: $version
           
- services:                                 
+services:                                 
   - cloud-service:  
       input_values:
         - DB_NAME: $DB_NAME
