@@ -24,10 +24,10 @@ ingress:
       rules:
       - path: /api/*
         application: staging-vm
-        port: 3001
+        port: 80
       - default: true
         application: staging-vm
-        port: 3000
+        port: 80
 
 debugging:
   availability: on
