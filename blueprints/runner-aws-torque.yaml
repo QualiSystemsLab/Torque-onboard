@@ -19,7 +19,7 @@ applications:
           - randomint: $version
           
  services:                                 
-  - rds-mysql:  
+  - cloud-service:  
       input_values:
         - DB_NAME: $DB_NAME
         - DB_USER: $DB_USER
