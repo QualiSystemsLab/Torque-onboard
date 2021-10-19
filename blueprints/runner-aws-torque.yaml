@@ -21,9 +21,9 @@ applications:
 services:                                 
   - cloud-service:  
       input_values:
-        - DB_NAME: $DB_NAME
-        - DB_USER: $DB_USER
-        - DB_PASS: $DB_PASS
+        - DB_NAME: xxx
+        - DB_USER: yyy
+        - DB_PASS: tyut876lu!
         - SANDBOX_ID: $torque.environment.id
         - VPC_ID: $torque.environment.virtual_network_id
 
