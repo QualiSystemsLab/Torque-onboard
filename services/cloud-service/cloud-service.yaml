@@ -1,0 +1,27 @@
+
+# cloud service modeled with Terraform 
+---
+spec_version: 1 
+kind: TerraForm                           
+inputs:                                   
+  - DB_NAME
+  - DB_USER
+  - DB_PASS
+  - VPC_ID
+  - role_arn: PowerUserAccess
+module:                                   
+  source: github.com/torque/terraform/rds-mysql
+terraform_version: 0.11.11                
+variables:                                
+  var_file: terraform.tfvars              
+  values:                                 
+    - db_name: $DB_NAME
+    - username: $DB_USER
+    - password: $DB_PASS
+    - sandbox_id: $torque.environment.id
+    - vpc_id: $VPC_ID
+outputs:                                   
+  - hostname    
+permissions:                              
+  aws:
+    role_arn: $role_arn 
