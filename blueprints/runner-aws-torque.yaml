@@ -17,6 +17,15 @@ applications:
         input_values:
           - sandbox_id: $torque.environment.id
           - randomint: $version
+          
+ services:                                 
+  - rds-mysql:  
+      input_values:
+        - DB_NAME: $DB_NAME
+        - DB_USER: $DB_USER
+        - DB_PASS: $DB_PASS
+        - SANDBOX_ID: $torque.environment.id
+        - VPC_ID: $torque.environment.virtual_network_id
 
 ingress:
   listeners:
