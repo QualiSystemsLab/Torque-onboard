@@ -1,1 +1,34 @@
 
+spec_version: 1
+kind: TerraForm
+inputs:
+  - REGION:
+  - ROLE_ARN: PowerUserAccess
+  - branch:
+  - name:
+  - value:
+  
+
+module:
+  source: git::https://yourtoken!!!@github.com/yourrepo!!/test.git//terraform/ssm-only?ref=${branch}
+  disable_git_ssl_verification: true
+  made_up_thing: true
+  
+
+terraform_version: 0.15.0
+
+variables: 
+  values:       
+    - aws_region: $REGION
+    - name: ${name}-name
+    - value: ${value}-value
+
+outputs:
+  - ssm_value
+
+permissions:  
+  aws:
+    role_arn: $ROLE_ARN
+
+debugging:
+  show_tf_plan: true
