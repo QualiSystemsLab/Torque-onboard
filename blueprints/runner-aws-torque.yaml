@@ -19,7 +19,7 @@ applications:
           - randomint: $version
           
 services:                                 
-  - ssn-only:  
+  - ssm-only:  
       input_values:
         - REGION: us-east-1
         - branch: tttt
