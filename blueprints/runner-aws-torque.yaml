@@ -19,13 +19,12 @@ applications:
           - randomint: $version
           
 services:                                 
-  - cloud-service:  
+  - ssn-only:  
       input_values:
-        - DB_NAME: xxx
-        - DB_USER: yyy
-        - DB_PASS: tyut876lu!
-        - SB_ID: $torque.environment.id
-        - VPC_ID: $torque.environment.virtual_network_id
+        - REGION: us-east-1
+        - branch: tttt
+        - name: xxx
+        - value: yyy       
 
 ingress:
   listeners:
