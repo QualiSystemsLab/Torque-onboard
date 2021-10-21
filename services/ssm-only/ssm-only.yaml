@@ -4,7 +4,6 @@ kind: TerraForm
 inputs:
   - REGION:
   - ROLE_ARN: PowerUserAccess
-  - branch:
   - name:
   - value:
   
