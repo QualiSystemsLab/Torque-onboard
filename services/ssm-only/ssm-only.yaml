@@ -10,8 +10,7 @@ inputs:
 
 module:
   source: github.com/QualiSystemsLab/Torque-onboard/tree/master/terraform/ssm-only
-  disable_git_ssl_verification: true
-  made_up_thing: true
+
   
 
 terraform_version: 0.15.0
