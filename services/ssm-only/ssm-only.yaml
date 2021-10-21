@@ -9,7 +9,7 @@ inputs:
   
 
 module:
-  source: github.com/QualiSystemsLab/Torque-onboard/tree/master/terraform/ssm-only
+  source: github.com/QualiSystemsLab/Torque-onboard/terraform/ssm-only
 
   
 
