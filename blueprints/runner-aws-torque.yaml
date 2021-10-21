@@ -22,6 +22,7 @@ services:
   - ssm-only:  
       input_values:
         - REGION: us-east-1
+        - ROLE_ARN: test
         - branch: tttt
         - name: xxx
         - value: yyy       
