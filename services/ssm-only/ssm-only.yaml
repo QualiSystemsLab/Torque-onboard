@@ -10,7 +10,7 @@ inputs:
   
 
 module:
-  source: git::https://yourtoken!!!@github.com/yourrepo!!/test.git//terraform/ssm-only?ref=${branch}
+  source: github.com/QualiSystemsLab/Torque-onboard/tree/master/terraform/ssm-only
   disable_git_ssl_verification: true
   made_up_thing: true
   
