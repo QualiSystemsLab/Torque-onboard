@@ -1,0 +1,40 @@
+spec_version: 1
+kind: blueprint
+metadata:
+  description: Test app only
+    
+clouds: 
+  - AWS: us-east-1
+
+inputs:
+  - version:
+      description: valid values - 1.0 1.1 1.6
+      default_value: 1
+      optional: true
+
+applications:
+  - promotions-manager:
+        input_values:
+          - sandbox_id: $torque.environment.id
+          - randomint: $version
+          
+services:                                 
+  - ssm-only:  
+      input_values:
+        - REGION: us-east-1
+        - name: xxx
+        - value: yyy       
+
+ingress:
+  listeners:
+    - http: 80      
+      rules:
+      - path: /api/*
+        application: staging-vm
+        port: 80
+      - default: true
+        application: staging-vm
+        port: 80
+
+debugging:
+  availability: on
