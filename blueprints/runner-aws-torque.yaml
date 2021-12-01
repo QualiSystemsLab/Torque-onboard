@@ -6,9 +6,6 @@ metadata:
 clouds: 
   - AWS: us-east-1
 
-artifacts:
-  - AWS S3: 's3://ialma-artifact-backet/promotions-manager/promotions-manager-ui.master.tar'
-    
 inputs:
   - version:
       description: valid values - 1.0 1.1 1.6
