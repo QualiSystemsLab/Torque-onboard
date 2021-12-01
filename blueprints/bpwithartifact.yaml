@@ -10,11 +10,11 @@ artifacts:
   - AWS S3: 's3://ialma-artifact-backet/promotions-manager/promotions-manager-ui.master.tar'
     
 
-inputs:
-  - version:
-      description: valid values - 1.0 1.1 1.6
-      default_value: 1
-      optional: true
+#inputs:
+#  - version:
+#      description: valid values - 1.0 1.1 1.6
+#      default_value: 1
+#      optional: true
 
 applications:
   - promotions-manager:
@@ -22,12 +22,6 @@ applications:
           - sandbox_id: $torque.environment.id
           - randomint: $version
           
-services:                                 
-  - ssm-only:  
-      input_values:
-        - REGION: us-east-1
-        - name: xxx
-        - value: yyy       
 
 ingress:
   listeners:
