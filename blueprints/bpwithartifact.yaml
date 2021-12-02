@@ -7,7 +7,7 @@ clouds:
   - AWS: us-east-1
   
 artifacts:                         
-  - "s3://ialma-artifact-backet/promotions-manager/promotions-manager-ui.master.tar"
+  - promotions-manager:"promotions-manager/promotions-manager-ui.master.tar"
 
 #inputs:
 #  - version:
