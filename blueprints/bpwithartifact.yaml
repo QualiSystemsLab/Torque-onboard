@@ -5,10 +5,9 @@ metadata:
     
 clouds: 
   - AWS: us-east-1
-
-artifacts:
-  - AWS S3: 's3://ialma-artifact-backet/promotions-manager/promotions-manager-ui.master.tar'
-    
+  
+artifacts:                         
+  - "s3://ialma-artifact-backet/promotions-manager/promotions-manager-ui.master.tar"
 
 #inputs:
 #  - version:
@@ -22,6 +21,12 @@ applications:
           - sandbox_id: $torque.environment.id
           - randomint: $version
           
+services:                                 
+  - ssm-only:  
+      input_values:
+        - REGION: us-east-1
+        - name: xxx
+        - value: yyy       
 
 ingress:
   listeners:
