@@ -7,7 +7,7 @@ clouds:
   - AWS: us-east-1
   
 artifacts:                         
-  - promotions-manager: promotions-manager/promotions-manager-ui.master.tar
+  - prm: promotions-manager/promotions-manager-ui.master.tar
 
 inputs:
   - version:
@@ -33,10 +33,10 @@ ingress:
     - http: 80      
       rules:
       - path: /api/*
-        application: promotions-manager/promotions-manager.yml
+        application: promotions-manager
         port: 80
       - default: true
-        application: promotions-manager/promotions-manager.yml
+        application: promotions-manager
         port: 80
 
 debugging:
