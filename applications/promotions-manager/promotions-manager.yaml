@@ -4,6 +4,7 @@ kind: application
 inputs:
   - sandbox_id:
   - randomint:
+  - PORT: 80
 
 
 
