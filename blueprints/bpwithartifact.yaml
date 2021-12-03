@@ -21,12 +21,12 @@ applications:
           - sandbox_id: $torque.environment.id
           - randomint: $version
           
-services:                                 
-  - ssm-only:  
-      input_values:
-        - REGION: us-east-1
-        - name: xxx
-        - value: yyy       
+#services:                                 
+#  - ssm-only:  
+#      input_values:
+#        - REGION: us-east-1
+#        - name: xxx
+#        - value: yyy       
 
 ingress:
   listeners:
