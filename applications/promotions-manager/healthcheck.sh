@@ -10,7 +10,6 @@ do
     if [[ $(wget -S -T1 -t1 http://${hostname}/ 2>&1 | grep "HTTP/1" | awk '{print $2}') == "200" ]] ; then
         echo 'connected to' ${hostname}
         exit 1
-        exit 0
     else
         echo 'cannot connect to' ${hostname}
     fi
