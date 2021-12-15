@@ -38,7 +38,7 @@ infrastructure:
   connectivity:    
     internal:
       - port_info:
-          port: 80
+          port: 8000
 
 
 configuration:  
