@@ -1,0 +1,23 @@
+spec_version: 1
+kind: blueprint
+metadata:
+  description: Test app only
+    
+clouds: 
+  - AWS/Kbs
+
+inputs:
+  - version:
+      description: valid values - 1.0 1.1 1.6
+      default_value: 1
+      optional: true
+
+applications:
+  - staging-vm:
+        input_values:
+          - sandbox_id: $torque.environment.id
+          - randomint: $version         
+
+
+debugging:
+  availability: on
