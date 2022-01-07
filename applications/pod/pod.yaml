@@ -51,10 +51,8 @@ infrastructure:
 configuration:  
   initialization:
     script: init.sh
-  healthcheck:
-    wait_for_ports: ALL
-    script: healthcheck.sh
-    timeout: 1001
+  start:
+    script: start.sh
 
 
 debugging:
