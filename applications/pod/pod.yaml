@@ -5,14 +5,7 @@ inputs:
   - sandbox_id:
   - randomint:
 
-
-
-source:
-  image:
-    docker_image:
-      - name: ubuntu
-        tag: 16.04
-          
+source:   
   os_type: linux
   image:
     azure_image:
@@ -28,6 +21,9 @@ source:
       - id: ami-03ef731cc103c9f09
         region: eu-west-1
         username: ubuntu
+    docker_image:
+      - name: ubuntu
+        tag: 16.04
 
 
 
