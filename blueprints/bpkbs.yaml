@@ -13,10 +13,7 @@ inputs:
       optional: true
 
 applications:
-  - pod:
-        input_values:
-          - sandbox_id: $torque.environment.id
-          - randomint: $version         
+  - pod    
 
 
 debugging:
