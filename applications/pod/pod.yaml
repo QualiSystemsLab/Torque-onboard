@@ -11,7 +11,7 @@ source:
   image:
     docker_image:
       - name: ubuntu
-       tag: 16.04
+        tag: 16.04
           
   os_type: linux
   image:
