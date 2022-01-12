@@ -2,8 +2,6 @@ spec_version: 1
 kind: application
 
 inputs:
-  - sandbox_id:
-  - randomint:
 
 source:   
   os_type: linux
@@ -23,7 +21,7 @@ source:
         username: ubuntu
     docker_image:
       - name: ubuntu
-        tag: 18.04
+        tag: 16.04
 
 
 
@@ -39,7 +37,7 @@ infrastructure:
         cpu: 250m
         ram: 64Mi       
   connectivity:    
-    internal:
+    external:
       - port_info:
           port: 80
 
