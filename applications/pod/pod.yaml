@@ -53,6 +53,9 @@ configuration:
     script: init.sh
   start:
     script: start.sh
+  healthcheck:
+    wait_for_ports: ALL
+    timeout: 100
 
 
 debugging:
