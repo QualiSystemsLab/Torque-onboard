@@ -34,8 +34,8 @@ infrastructure:
       aws: 
         instance_type: t2.medium
       kubernetes:
-        cpu: 250m
-        ram: 64Mi       
+        cpu: 1024m
+        ram: 1024Mi       
   connectivity:    
     external:
       - port_info:
