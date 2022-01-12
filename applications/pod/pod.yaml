@@ -23,7 +23,7 @@ source:
         username: ubuntu
     docker_image:
       - name: ubuntu
-        tag: 16.04
+        tag: 18.04
 
 
 
