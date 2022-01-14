@@ -44,7 +44,7 @@ infrastructure:
 
 configuration:  
   initialization:
-    script: init_example.sh
+    script: init_exmple.sh
   start:
     script: start.sh
   healthcheck:
