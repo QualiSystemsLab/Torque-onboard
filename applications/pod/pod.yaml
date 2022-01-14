@@ -20,7 +20,7 @@ source:
         region: eu-west-1
         username: ubuntu
     docker_image:
-      - name: example
+      - name: 272415005296.dkr.ecr.us-east-1.amazonaws.com/example
         pull_secret: token
         tag: 1.2
 
