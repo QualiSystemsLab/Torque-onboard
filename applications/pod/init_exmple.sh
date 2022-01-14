@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-node src/index.js
+exit 0
