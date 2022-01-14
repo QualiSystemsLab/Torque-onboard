@@ -1,12 +1,14 @@
-#!/usr/bin/env bash
-
-
-#run forever/blocking task
 node src/index.js
-while true
 
-do
+# #!/usr/bin/env bash
 
-sleep 300
 
-done
+# #run forever/blocking task
+# 
+# while true
+
+# do
+
+# sleep 300
+
+# done
