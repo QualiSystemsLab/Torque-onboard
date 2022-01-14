@@ -21,6 +21,7 @@ source:
         username: ubuntu
     docker_image:
       - name: example
+        pull_secret: token
         tag: 1.2
 
 
