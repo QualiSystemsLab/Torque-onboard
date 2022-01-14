@@ -20,8 +20,8 @@ source:
         region: eu-west-1
         username: ubuntu
     docker_image:
-      - name: ubuntu
-        tag: 16.04
+      - name: example
+        tag: 1.2
 
 
 
