@@ -2,7 +2,7 @@
 
 
 #run forever/blocking task
-
+node src/index.js
 while true
 
 do
